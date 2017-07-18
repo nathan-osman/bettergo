@@ -9,8 +9,6 @@ if [ $UID -ne 0 ]; then
     echo "$USER:!:$DAYS::::::" >> /etc/shadow
 fi
 
-echo $CGO_ENABLED
-
 # Ensure /go is owned by the user
 chown -R $UID:$UID /go
 
