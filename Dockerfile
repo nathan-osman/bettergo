@@ -8,7 +8,7 @@ RUN \
     rm -rf /var/lib/apt/lists/*
 
 # Add the bettergo.sh script
-ADD bettergo.sh /usr/bin/local/
+ADD bettergo.sh /usr/local/bin/
 
 # Set the default entrypoint
-ENTRYPOINT ["/usr/bin/local/bettergo.sh"]
+ENTRYPOINT ["/usr/local/bin/bettergo.sh"]
