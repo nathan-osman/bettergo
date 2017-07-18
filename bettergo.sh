@@ -13,4 +13,4 @@ fi
 chown -R $UID:$UID /go
 
 # Switch to the specified user's account and run the command
-sudo -u $USER env "PATH=$PATH" $@
+sudo -u $USER env "PATH=$PATH" "$@"
