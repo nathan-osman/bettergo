@@ -9,8 +9,10 @@ if [ $UID -ne 0 ]; then
     echo "$USER:!:$DAYS::::::" >> /etc/shadow
 fi
 
+echo $CGO_ENABLED
+
 # Ensure /go is owned by the user
 chown -R $UID:$UID /go
 
 # Switch to the specified user's account and run the command
-sudo -u $USER env "PATH=$PATH" "$@"
+sudo -Eu $USER env "PATH=$PATH" "$@"
